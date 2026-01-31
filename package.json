@@ -1,0 +1,16 @@
+{
+  "name": "nfl-imposter",
+  "version": "1.0.0",
+  "description": "Send NFL imposter game emails to players",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": ["nfl", "game", "imposter"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "nodemailer": "^6.9.8",
+    "dotenv": "^16.3.1"
+  }
+}
