@@ -6,11 +6,16 @@
   "scripts": {
     "start": "node index.js"
   },
-  "keywords": ["nfl", "game", "imposter"],
+  "keywords": [
+    "nfl",
+    "game",
+    "imposter"
+  ],
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "nodemailer": "^6.9.8",
-    "dotenv": "^16.3.1"
+    "dotenv": "^16.3.1",
+    "inquirer": "^8.2.7",
+    "nodemailer": "^6.9.8"
   }
 }

@@ -4,8 +4,10 @@ A CLI tool to send NFL imposter game emails to players. The app randomly selects
 
 ## How It Works
 
-- 2 players receive an email with the name of a current NFL player
-- 1 player receives an email saying they're the imposter
+- Works with any number of players (minimum 2)
+- You choose how many imposters (must be less than total players)
+- Regular players receive an email with the name of a current NFL player
+- Imposters receive an email saying they're the imposter
 - The assignment is completely random - you won't know who got what!
 
 ## Setup
@@ -47,32 +49,63 @@ Since you're using Gmail, you need to create an App Password:
 
 ## Usage
 
-Run the app with 3 email addresses:
+Run the app:
 
 ```bash
-node index.js player1@email.com player2@email.com player3@email.com
+node index.js
 ```
 
 Or use the npm script:
 
 ```bash
-npm start player1@email.com player2@email.com player3@email.com
+npm start
 ```
 
-The app will:
+The app will prompt you for:
+1. **Player email addresses** - Enter comma-separated emails (e.g., `player1@email.com, player2@email.com, player3@email.com`)
+2. **Number of imposters** - Choose how many imposters you want
+
+Then the app will:
 1. Randomly select an NFL player from the list
-2. Randomly assign one person as the imposter
-3. Send emails to all 3 players with their roles
+2. Randomly assign the specified number of people as imposters
+3. Send emails to all players with their roles
+
+**Example:**
+```
+🏈 NFL Imposter Game Setup
+
+? Enter player email addresses (comma-separated): alice@email.com, bob@email.com, charlie@email.com, dana@email.com
+? How many imposters? 1
+
+🏈 Starting NFL Imposter Game...
+
+📧 Sending emails to 4 players
+🎭 1 imposter(s), 3 regular player(s)
+
+✅ Email sent to alice@email.com
+✅ Email sent to bob@email.com
+✅ Email sent to charlie@email.com
+✅ Email sent to dana@email.com
+
+✨ All emails sent successfully!
+🎮 The game is ready to begin!
+```
 
 ## Game Rules
 
 After everyone receives their email:
 
 1. Each player takes turns giving ONE hint about "their" player
-2. The imposter must give a hint too, trying to blend in without knowing who the actual player is
-3. After all hints are given, players discuss and vote on who they think is the imposter
-4. The imposter wins if they can guess the NFL player OR if they don't get caught
-5. The other players win if they correctly identify the imposter
+2. Imposters must give hints too, trying to blend in without knowing who the actual player is
+3. After all hints are given, players discuss and vote on who they think are the imposters
+4. Imposters win if they can guess the NFL player OR if they don't get caught
+5. Regular players win if they correctly identify all the imposters
+
+**Tips:**
+- With multiple imposters, they can work together or independently
+- Imposters don't know who the other imposters are
+- Start with 1 imposter for smaller groups (3-5 players)
+- Use 2+ imposters for larger groups (6+ players) for more chaos
 
 ## Player List
 
