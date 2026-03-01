@@ -1,6 +1,6 @@
-// Famous current NFL players by position
+// Famous NFL players by position — current and all-time greats
 const players = [
-  // Quarterbacks
+  // Quarterbacks (Current)
   "Patrick Mahomes",
   "Josh Allen",
   "Lamar Jackson",
@@ -16,8 +16,28 @@ const players = [
   "Jared Goff",
   "Kirk Cousins",
   "Baker Mayfield",
+  "Aaron Rodgers",
+  "Kyler Murray",
 
-  // Wide Receivers
+  // Quarterbacks (Recently Retired)
+  "Cam Newton",
+  "Andrew Luck",
+  "Philip Rivers",
+  "Russell Wilson",
+  "Ben Roethlisberger",
+  "Eli Manning",
+
+  // Quarterbacks (Legends)
+  "Tom Brady",
+  "Peyton Manning",
+  "Drew Brees",
+  "Brett Favre",
+  "Joe Montana",
+  "Dan Marino",
+  "John Elway",
+  "Kurt Warner",
+
+  // Wide Receivers (Current)
   "Tyreek Hill",
   "Justin Jefferson",
   "CeeDee Lamb",
@@ -36,8 +56,30 @@ const players = [
   "Cooper Kupp",
   "Mike Evans",
   "Calvin Ridley",
+  "Deebo Samuel",
+  "Keenan Allen",
+  "Jaylen Waddle",
+  "Tee Higgins",
+  "Jerry Jeudy",
+  "Rashee Rice",
+  "Xavier Worthy",
 
-  // Running Backs
+  // Wide Receivers (Recently Retired)
+  "Julio Jones",
+  "Odell Beckham Jr.",
+  "Antonio Brown",
+  "Emmanuel Sanders",
+  "Golden Tate",
+
+  // Wide Receivers (Legends)
+  "Jerry Rice",
+  "Randy Moss",
+  "Terrell Owens",
+  "Calvin Johnson",
+  "Larry Fitzgerald",
+  "Chad Johnson",
+
+  // Running Backs (Current)
   "Christian McCaffrey",
   "Derrick Henry",
   "Saquon Barkley",
@@ -56,7 +98,21 @@ const players = [
   "Alvin Kamara",
   "Joe Mixon",
 
-  // Tight Ends
+  // Running Backs (Recently Retired)
+  "Le'Veon Bell",
+  "Todd Gurley",
+  "LeSean McCoy",
+  "Kareem Hunt",
+
+  // Running Backs (Legends)
+  "Barry Sanders",
+  "Emmitt Smith",
+  "Walter Payton",
+  "LaDainian Tomlinson",
+  "Adrian Peterson",
+  "Marshawn Lynch",
+
+  // Tight Ends (Current)
   "Travis Kelce",
   "Mark Andrews",
   "George Kittle",
@@ -68,7 +124,41 @@ const players = [
   "David Njoku",
   "Dalton Kincaid",
   "Jake Ferguson",
-  "Trey McBride"
+  "Trey McBride",
+
+  // Tight Ends (Legends)
+  "Rob Gronkowski",
+  "Tony Gonzalez",
+  "Shannon Sharpe",
+  "Antonio Gates",
+
+  // Defenders & Other Stars (Current)
+  "Micah Parsons",
+  "Nick Bosa",
+  "Myles Garrett",
+  "T.J. Watt",
+  "Sauce Gardner",
+  "Jalen Ramsey",
+  "Maxx Crosby",
+  "Roquan Smith",
+  "Fred Warner",
+  "Christian Wilkins",
+
+  // Defenders & Other Stars (Recently Retired)
+  "J.J. Watt",
+  "Richard Sherman",
+  "Luke Kuechly",
+  "Von Miller",
+  "Khalil Mack",
+  "Patrick Peterson",
+
+  // Defenders & Other Stars (Legends)
+  "Lawrence Taylor",
+  "Reggie White",
+  "Ray Lewis",
+  "Deion Sanders",
+  "Troy Polamalu",
+  "Darrelle Revis"
 ];
 
 module.exports = players;

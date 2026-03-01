@@ -100,16 +100,19 @@ async function sendEmails(emails, numImposters) {
     for (const email of shuffledEmails) {
       const isImposter = imposterEmails.includes(email);
 
+      const playerListText = '\n\n---\nPossible Players Pool:\n' + players.join('\n');
+      const playerListHtml = `<hr><h3>Possible Players Pool:</h3><p style="font-size:13px;color:#555;">${players.join('<br>')}</p>`;
+
       const mailOptions = {
         from: process.env.GMAIL_USER,
         to: email,
         subject: '🏈 NFL Imposter Game - Your Role',
         text: isImposter
-          ? '🎭 YOU ARE THE IMPOSTER!\n\nYour role is to blend in without knowing the NFL player. Listen to the hints from the other players and try to guess who they\'re talking about without revealing that you don\'t know!\n\nGood luck! 🕵️'
-          : `🏈 Your NFL Player: ${selectedPlayer}\n\nGive hints about this player without being too obvious. Watch out for the imposter(s) who don't know who the player is!\n\nGood luck! 🎯`,
+          ? `🎭 YOU ARE THE IMPOSTER!\n\nYour role is to blend in without knowing the NFL player. Listen to the hints from the other players and try to guess who they're talking about without revealing that you don't know!\n\nGood luck! 🕵️${playerListText}`
+          : `🏈 Your NFL Player: ${selectedPlayer}\n\nGive hints about this player without being too obvious. Watch out for the imposter(s) who don't know who the player is!\n\nGood luck! 🎯${playerListText}`,
         html: isImposter
-          ? '<h1>🎭 YOU ARE THE IMPOSTER!</h1><p>Your role is to blend in without knowing the NFL player. Listen to the hints from the other players and try to guess who they\'re talking about without revealing that you don\'t know!</p><p><strong>Good luck! 🕵️</strong></p>'
-          : `<h1>🏈 Your NFL Player</h1><h2 style="color: #013369;">${selectedPlayer}</h2><p>Give hints about this player without being too obvious. Watch out for the imposter(s) who don't know who the player is!</p><p><strong>Good luck! 🎯</strong></p>`
+          ? `<h1>🎭 YOU ARE THE IMPOSTER!</h1><p>Your role is to blend in without knowing the NFL player. Listen to the hints from the other players and try to guess who they're talking about without revealing that you don't know!</p><p><strong>Good luck! 🕵️</strong></p>${playerListHtml}`
+          : `<h1>🏈 Your NFL Player</h1><h2 style="color: #013369;">${selectedPlayer}</h2><p>Give hints about this player without being too obvious. Watch out for the imposter(s) who don't know who the player is!</p><p><strong>Good luck! 🎯</strong></p>${playerListHtml}`
       };
 
       await transporter.sendMail(mailOptions);
